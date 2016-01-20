@@ -1,0 +1,19 @@
+{
+  "name": "manage-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for auth0 extensions",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "auth0",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.8.1",
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-server-livereload": "^1.6.2",
+    "gulp-stylus": "^2.1.0",
+    "gulp-watch": "^4.3.5"
+  }
+}
