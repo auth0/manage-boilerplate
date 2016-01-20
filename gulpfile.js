@@ -16,7 +16,7 @@ gulp.task('template', function() {
 });
 
 gulp.task('styles', function () {
-	return gulp.src('lib/**/*.styl')
+	return gulp.src('lib/css/*.styl')
 		.pipe(stylus({
 			use: [autoprefixer('iOS >= 7', 'last 1 Chrome version')],
 			url: {

@@ -1,79 +1,33 @@
-doctype html
-html(lang='en', hola_ext_inject='disabled')
-  head
-    title Auth0
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='shortcut icon', href='https://cdn.auth0.com/styleguide/2.0.1/lib/logos/img/favicon.png')
-    meta(name='description', content='auth0/manage boilerplate')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='apple-touch-icon', href='apple-touch-icon.png')
-    link(rel='stylesheet', type='text/css', href='https://cdn.auth0.com/manage/v0.3.973/css/index.min.css')
-    link(rel='stylesheet', type='text/css', href='css/main.css')
-    script(type='text/javascript', src='https://cdn.auth0.com/manage/v0.3.973/components/ZeroClipboard/ZeroClipboard.js')
-    script(type='text/javascript', src='https://cdn.auth0.com/manage/v0.3.973/js/bundle.js')
-  body
-    header.dashboard-header(style='background-color: #fbfbfb')
-      nav.navbar.navbar-default(role='navigation')
-        .container
-          .navbar-header
-            h1.navbar-brand
-              a(href='http://manage.auth0.com/')
-                span Auth0
-          #navbar-collapse.collapse.navbar-collapse
-            ul.nav.navbar-nav.navbar-right
-              li
-                a.upgrade-account(href='/#/account/billing/subscription')
-                  i.icon-budicon-466
-                  |  Link
-              li
-                a(target='_blank', href='https://auth0.com/support') Link
-              li
-                a(target='_blank', href='https://auth0.com/docs') Link
-              li.dropdown
-                span.btn-dro.btn-username(role='button', data-toggle='dropdown', data-target='#')
-                  img.picture.avatar(src='https://secure.gravatar.com/avatar/a12075a065d2c41ac447dcffc1398d43?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fro.png')
-                  span.username-text.truncate Username
-                  i.icon-budicon-460
-                ul.dropdown-menu.animated(role='menu', aria-labelledby='dLabel')
-                  li(role='presentation')
-                    a(role='menuitem', tabindex='-1', href='#/account') Account settings
-                  li.divider(role='presentation')
-                  li(role='presentation')
-                    a.new_account(role='menuitem', tabindex='-1', href='#') New Account
-                  li.divider(role='presentation')
-                  li(role='presentation')
-                    a(role='menuitem', tabindex='-1', href='/logout') Logout
-    .container
+extends inc/layout
+
+block content
+  section.content-page.current
+    .col-xs-12
       .row
-        section#dashboard.content-page.current(data-route='/', data-title='Dashboard ')
-          .col-xs-12
-            .row
-              .col-xs-12.content-header
-                ol.breadcrumb
-                  li
-                    a(href='#') Auth0 Dashboard
-                  li
-                    a(href='#') Extensions
-                h1.pull-left Sample Section
+        .col-xs-12.content-header
+          ol.breadcrumb
+            li
+              a(href='#') Auth0 Dashboard
+            li
+              a(href='#') Extensions
+          h1.pull-left Sample Section
 
-            .widget-title.title-with-nav-bars
-              ul.nav.nav-tabs
-                li.active
-                  a(data-toggle='tab', href='#profile', aria-expanded='true')
-                    span.tab-title Profile
-                li
-                  a(data-toggle='tab', href='#messages')
-                    span.tab-title Messages
-                li
-                  a(data-toggle='tab', href='#settings')
-                    span.tab-title Settings
+      .widget-title.title-with-nav-bars
+        ul.nav.nav-tabs
+          li.active
+            a(data-toggle='tab', href='#profile', aria-expanded='true')
+              span.tab-title Profile
+          li
+            a(data-toggle='tab', href='#messages')
+              span.tab-title Messages
+          li
+            a(data-toggle='tab', href='#settings')
+              span.tab-title Settings
 
-            #content-area.tab-content
-              #profile.tab-pane.active
-                | Profile
-              #messages.tab-pane
-                | Messages
-              #settings.tab-pane
-                | Settings
+      #content-area.tab-content
+        #profile.tab-pane.active
+          | Profile
+        #messages.tab-pane
+          | Messages
+        #settings.tab-pane
+          | Settings
