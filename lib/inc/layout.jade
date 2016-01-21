@@ -14,7 +14,7 @@ html(lang='en', hola_ext_inject='disabled')
     script(type='text/javascript', src='https://cdn.auth0.com/manage/v0.3.973/components/ZeroClipboard/ZeroClipboard.js')
     script(type='text/javascript', src='https://cdn.auth0.com/manage/v0.3.973/js/bundle.js')
   body
-    header.dashboard-header(style='background-color: #fbfbfb')
+    header.dashboard-header
       nav.navbar.navbar-default(role='navigation')
         .container
           .navbar-header
@@ -24,13 +24,9 @@ html(lang='en', hola_ext_inject='disabled')
           #navbar-collapse.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
               li
-                a.upgrade-account(href='/#/account/billing/subscription')
-                  i.icon-budicon-466
-                  |  Link
+                a(target='_blank', href='https://auth0.com/support') Help & Support
               li
-                a(target='_blank', href='https://auth0.com/support') Link
-              li
-                a(target='_blank', href='https://auth0.com/docs') Link
+                a(target='_blank', href='https://auth0.com/docs') Documentation
               li.dropdown
                 span.btn-dro.btn-username(role='button', data-toggle='dropdown', data-target='#')
                   img.picture.avatar(src='https://secure.gravatar.com/avatar/a12075a065d2c41ac447dcffc1398d43?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fro.png')

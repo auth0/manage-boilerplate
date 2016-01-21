@@ -27,6 +27,9 @@
 .breadcrumb li {
   margin: 0;
 }
+.content-header {
+  margin-bottom: 0;
+}
 .content-header h1 {
   margin-top: 0;
   line-height: 1;
